@@ -1,8 +1,8 @@
-provider "cloudstack" {
-  api_url    = var.cloudstack_api_url
-  api_key    = var.cloudstack_api_key
-  secret_key = var.cloudstack_secret_key
-}
+# CloudStack provider reads credentials from environment variables:
+#   CLOUDSTACK_API_URL
+#   CLOUDSTACK_API_KEY
+#   CLOUDSTACK_SECRET_KEY
+provider "cloudstack" {}
 
 provider "helm" {
   kubernetes = {
